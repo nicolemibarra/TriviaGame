@@ -1,121 +1,123 @@
 body{
     font-size: 20px;
-    font-family: monospace;
 }
 
 #container{
-    margin : 20px auto;
+    margin: 20px auto;
     background-color: white;
     height: 300px;
-    width : 700px;
+    width: 600px;
     border-radius: 5px;
     box-shadow: 0px 5px 15px 0px;
     position: relative;
+    text-align: center;
+    padding: 50px;
 }
 
 #start{
-    font-size: 1.5em;
+    font-size: 30px;
     font-weight: bolder;
-    word-break: break-all;
-    width:100px;
-    height:150px;
-    border : 2px solid lightgrey;
+    word-break: break-all;  
+    width: 400px;
+    height: 50px;
+    border: 2px solid gray;
     text-align: center;
     cursor: pointer;
     position: absolute;
-    left:300px;
-    top:50px;
-    color : lightgrey;
+    left: 150px;
+    top: 200px;   
+    color: gray;
 }
 
 #start:hover{
-    border: 3px solid lightseagreen;
-    color : lightseagreen;
+    border: 3px solid greenyellow;
+    color: greenyellow;
 }
 
-#questionImg{
-    width : 200px;
-    height : 200px;
+#questionImage{
+    width: 1px;
+    height: 100px;
     position: absolute;
-    left : 0px;
-    top : 0px;
+    left: 30px;
+    top: 25px;
 }
-#questionImg img{
-    width : 200px;
-    height : 200px;
+#questionImage img{
+    width: 100px;
+    height: 100px;
     border-top-left-radius: 5px;
 }
 
 #question{
-    width:500px;
-    height : 125px;
+    width: 500px;
+    height: 125px;
     position: absolute;
-    right:0;
-    top:0;
+    right: 0;
+    top: 0;
 }
 
 #question p{
-    margin : 0;
-    padding : 15px;
-    font-size: 1.25em;
+    margin: 0;
+    padding: 25px;
+    font-size: 30px;
 }
 
 #choices{
-    width : 480px;
+    width: 480px;
     position: absolute;
-    right : 0;
-    top : 125px;
-    padding : 10px
+    right: 0;
+    top: 125px;
+    padding: 5px
 }
 
 .choice{
     display: inline-block;
-    width : 135px;
-    text-align: center;
-    border : 1px solid grey;
+    width: 135px;
+    text-align: left;
+    border: 2px solid grey;
     border-radius: 5px;
     cursor: pointer;
-    padding : 5px;
+    padding: 5px;
 }
 
 .choice:hover{
-    border : 2px solid grey;
-    font-weight: bold;
+    border: 2px solid grey;
+    color: white;
+    background-color: grey;
 }
 
 #timer{
     position: absolute;
-    height : 100px;
-    width : 200px;
-    bottom : 0px;
+    height: 100px;
+    width: 100px;
+    bottom: 0px;
     text-align: center;
 }
 #counter{
-    font-size: 3em;
+    font-size: 20px;
+    text-align: relative;
+    font-weight: bold;
 }
 
 #btimeGauge{
-    width : 150px;
-    height : 10px;
+    width: 100px;
+    height: 10px;
     border-radius: 10px;
     background-color: lightgray;
-    margin-left : 25px;
 }
 
 #timeGauge{
-    height : 10px;
+    height: 10px;
     border-radius: 10px;
-    background-color: mediumseagreen;
-    margin-top : -10px;
-    margin-left : 25px;
+    background-color: yellowgreen;
+    margin-top: -10px;
 }
 
 #scoreContainer{
-    margin : 20px auto;
+    margin: 20px auto;
     background-color: white;
     opacity: 0.8;
     height: 300px;
-    width : 700px;
+    width: 700px;
     border-radius: 5px;
     box-shadow: 0px 5px 15px 0px;
     position: relative;
@@ -123,19 +125,19 @@ body{
 }
 
 #scoreContainer img{
-    position: absolute;
-    top:100px;
-    left:325px;
+    position: absolute; 
+    top: 100px;
+    left: 325px;
 }
 
 #scoreContainer p{
     position: absolute;
     display: block;
-    width : 59px;
-    height :59px;
-    top:130px;
-    left:325px;
-    font-size: 1.5em;
+    width: 60px;
+    height: 60px;
+    top: 130px;
+    left: 325px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
 }

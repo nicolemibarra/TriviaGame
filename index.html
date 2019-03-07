@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Jeep Trivia Game!</title>
-
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 <style>
     body{ 
-        background-image: url(file:///Users/Nicole/Desktop/TriviaGame/assets/images/jeeps.jpg);
+        background-image: url("./assets/images/jeeps.jpeg");
         background-size: cover;
         background-attachment: fixed;
     }
 </style>
 <div id="container">
-    <div id="instructions">Instructions: You will have 30 seconds to asnwer each question. To begin click on "Start Jeep Trivia!"</div> 
+    <div id="instructions">Instructions:<br>
+    You will have 30 seconds to asnwer each question. To begin click on "Start Jeep Trivia!"</div> 
     <div id="start">Start Jeep Trivia!</div> 
     <div id="trivia" style="display: none">
     <div id="question"></div> 
-    <div id="quesitonImage"></div>
+    <div id="questionImage"></div>
     <div id="choices">
-        <div class="choice" id="A" onclick="checkAnswer('A')">A</div>
-        <div class="choice" id="B" onclick="checkAnswer('B')">B</div>
-        <div class="choice" id="C" onclick="checkAnswer('C')">C</div>
+        <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+        <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+        <div class="choice" id="C" onclick="checkAnswer('C')"></div>
 </div>
 <div id="timer"> 
     <div id="counter"></div> 

@@ -12,28 +12,28 @@ const scoreDiv = document.getElementById("score");
 let questions = [
     {
         question : "The name Jeep originated from...",
-        imgSrc : "images/logo.jpg",
-        choiceA : "last name of a Army Commander.",
+        imgSrc: "./assets/images/logo.jpeg",
+        choiceA : "a last name of a Army Commander.",
         choiceB : "'GP' for General Purpose.",
         choiceC : "a character from the cartoon Popeye.",
         correct : "B",
     },{
         question : "One of the Wrangler models is named for what famous trail?",
-        imgSrc : "images/rubicon.jpg",
+        imgSrc : "./assets/images/rubicon.jpeg",
         choiceA : "Moab",
         choiceB : "Mojave",
         choiceC : "Rubicon",
         correct : "C",
     },{
         question : "The seven slots in the grill represent the number of...",
-        imgSrc : "images/grill.jpg",
+        imgSrc : "./assets/images/grill.jpeg",
         choiceA : "continents in the World.",
         choiceB : "day in a week.",
         choiceC : "the basic colors in a spectrum.",
         correct : "A", 
     },{
         question : "When Jeeps Wranglers pass on the road the drivers will...",
-        imgSrc : "images/wave.jpg",
+        imgSrc : "./assets/images/wave.jpeg",
         choiceA : "flash high beams.",
         choiceB : "Jeep wave.",
         choiceC : "Honk",
@@ -54,19 +54,19 @@ function renderQuestion(){
     let q = questions[runningQuestion];
 
     question.innerHTML = "<p>"+ q.question +"</p>";
-    questionImage.innerHTML = "<img src="+ questionImageSrc +">";
+    questionImage.innerHTML = "<img src="+ q.imgSrc +">";
     choiceA.innerHTML = q.choiceA;
     choiceB.innerHTML = q.choiceB;
     choiceC.innerHTML = q.choiceC;
 }
 
-start.addEventListener("click", startTrivia);
+start.addEventListener("click",startTrivia);
 
 function startTrivia(){
     start.style.display = "none";
     instructions.style.display = "none";
     renderQuestion();
-    quiz.style.display = "block";
+    trivia.style.display = "block";
     renderCounter();
     TIMER = setInterval(renderCounter,1000);
 }
@@ -79,8 +79,8 @@ function renderCounter(){
     }else{
         count = 0;
         answerIsIncorrect();
-        if(runningQuesiton < lastQuestion) {
-            runningQuesiton++;
+        if(runningQuestion < lastQuestion) {
+            runningQuestion++;
             renderQuestions();
         }else{
             clearInterval(TIMER);
@@ -97,8 +97,8 @@ function checkAnswer(answer){
         answerIsIncorrect();
     }
     count = 0;
-    if(runningQuesiton < lastQuestion) {
-        runningQuesiton++;
+    if(runningQuestion < lastQuestion){
+        runningQuestion++;
         renderQuestions();
     }else{
         clearInterval(TIMER);
@@ -109,14 +109,14 @@ function checkAnswer(answer){
 function scoreRender(){
     scoreDiv.style.display = "block";
 
-    const scorePercent = Math.round(100 * score/questions.length)
+    const scorePercent = Math.round(100 * score/questions.length);
 
-    let img = (scorePercent >= 80) ? "img/80.jpg." :
-            (scorePercent >= 60) ? "img/60.jpg." :
-            (scorePercent >= 40) ? "img/40.jpg." :
-            (scorePercent >= 20) ? "img/20.jpg." : 
-            "img/0.jpg";
+    let image = (scorePercent >= 80) ? "image/80.jpeg." :
+            (scorePercent >= 60) ? "image/60.jpeg." :
+            (scorePercent >= 40) ? "image/40.jpeg." :
+            (scorePercent >= 20) ? "image/20.jpeg." : 
+            "image/0.jpeg";
 
-    scoreDiv.innerHTML = "<img src="+ img +">";
+    scoreDiv.innerHTML = "<img src="+ image +">";
     scoreDiv.innerHTML += "<p>"+ scorePercent +"%</p>";
 }           
